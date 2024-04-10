@@ -43,6 +43,4 @@ main() {
 	} else {
 		printf("%d nije u opsegu od 3 do 10\n", m);
 	}
-
-	
 }
