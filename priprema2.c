@@ -1,13 +1,16 @@
+#include <stdio.h>
+#include <ctype.h>
+#define MAX 30
+
 main() {
-	int pom, broj, n=0;
+	/*int c, nc=0;
+	while ((c=getchar()) != EOF)
+		if(c==' ' || c=='\t')
+			putchar('\n');
+		else
+			putchar(c);*/
+	/*char ime[MAX];
+	gets(ime);
+	printf("\n Zdravo %s.", ime);*/
 
-	printf("Unesite bilo koji ceo broj");
-	scanf("%d", &broj);
-	pom = broj;
-
-	while(broj != 0){
-		broj = broj/10;
-		n++;
-	}
-	printf("%d ima %d cifara", pom, n);
 }
