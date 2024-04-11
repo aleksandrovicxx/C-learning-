@@ -2,6 +2,7 @@
 #include <ctype.h>
 #define MAX 30
 #define N 32
+#define MASKA 0x0f
 
 main() {
 	/*int c, nc=0;
@@ -117,8 +118,22 @@ main() {
 Задатак 4.
 Написати програм на језику С који чита са тастатуре два цела броја x и y (x>0 и 1≤y<=9) и
 приказује на екрану редни број сваког појављивања бинарног облика другог задатог броја у
-бинарном облику првог броја x (1. бит је бит најмање тежине) и укупан број ових појављивања.
-Задатак 5.
+бинарном облику првог броја x (1. бит је бит најмање тежине) и укупан број ових појављивања.*/
+	int x, y, i, br_kombinacija=0;
+	do{ 
+		printf("Unesite x i y:\n");
+		scanf("%d%d", &x, &y);
+	}while(x<=0 || y<1 || y>9);
+	for(i=1; i<=N;i++){ // OVDE i ITERIRA OD 1 DO 32
+		if((x & MASKA) == y){ // MASKA JE 1111, ONA SE MNOZI SA BROJEM, I AKO JE REZULTAT = Y: \|/
+			printf("\nBinarna kombinacija broja y na mestu %d. bita u broju x", i); // ISPISUJE SE PORUKA
+			br_kombinacija++;// POVECAVA SE BROJ KOMBINACIJA ODNOSNO BROJ POKLAPANJA
+		}
+		x=x>>1; // OVDE SE NAS BROJ POMERA ZA JEDNO MESTO UDESNO, KAKO BI SE UPOREDJIVALI NAREDNI BITOVI
+	}
+	printf("\nBroj pojavljivanja kombinacija: %d\n", br_kombinacija);
+
+/*Задатак 5.
 Написати програм на језику С који приказује на екрану n редова по n знакова, при чему се знак и
 број n (2≤n≤10) задају преко тастатуре.
 Задатак 6.
