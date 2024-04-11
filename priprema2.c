@@ -93,6 +93,26 @@ main() {
 редни број бита са првим и последњим појављивањем јединице у бинарном облику (1. бит је бит
 најмање тежине), као и укупан број јединица у бинарном облику задатог броја. */
 
+	//int broj, i, brojJedinica = 0, poslednjaJedinica=0, prvaJedinica = 0;
+
+	//printf("Unesite pozitivan ceo broj: \t");
+	//scanf("%d", &broj);
+
+	//for(i=0; i<=N; i++){
+	//	if(broj & (1<<(i-1))){ //i-1 ZATO STO SE i UVECAVA U SVAKOJ ITERACIJI
+	//		brojJedinica++;
+	//		poslednjaJedinica = i;
+	//		if(!prvaJedinica){
+	//			prvaJedinica = i;
+	//		}
+	//	}
+	//}
+	//printf("Broj jedinica: %d\n", brojJedinica);
+	//printf("Poslednja jedinica je na mestu  %d. bita\n", poslednjaJedinica);
+	//printf("Prva jedinica je na mestu  %d. bita\n", prvaJedinica);
+	//										 
+
+
 	/*
 Задатак 4.
 Написати програм на језику С који чита са тастатуре два цела броја x и y (x>0 и 1≤y<=9) и
