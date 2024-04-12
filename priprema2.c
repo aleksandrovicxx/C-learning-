@@ -257,6 +257,89 @@ c) * d) *******
 // 		putchar(znak); 
 // 		putchar('\n');
 // 	}
+#include <stdio.h>
+#define MIN 5
+#define MAX 15
+main(){
 
+//Задатак 2.
+//Написати програм на језику С који:
+//a) чита са тастатуре један знак и један цео број n,
+//b) проверава да ли је учитани знак један од знакова * или + и да ли је n непаран број у опсегу од
+//5 до 15, ако све то важи приказује на екрану n редова по n задатих знакова,
+//c) ако важе задати услови, приказује на екрану сва слова абецеде (од укупно 26 њих), највише по
+//n у сваком реду, у оквиру од задатог знака, на пример за знак * и n=9:
+// ***********
+// * abcdefghi *
+// * jklmnopqr*
+// * stuvwxyz *
+// ***********
+////Решење 2.
+
+//	int i, j, k, n, znak, slovo, praznih;
+//	do{
+//		printf("\nZnak: "); znak = getchar();getchar();
+//	}while(znak!='*' && znak!='+');
+//	do{
+//		printf("\nNeparan Broj n (u posegu od %d do %d): ", MIN, MAX);
+//		scanf("%d", &n);
+//	}while( n<MIN || n>MAX || !(n%2) );
+//	for(i=1; i<=n; i++){
+//		for(j=1; j<=n; j++)
+//			putchar(znak);
+//		putchar('\n');
+//	}
+//	putchar('\n');
+//	for(i=1; i<=(n+2); i++) 
+//		putchar(znak); 
+//	putchar('\n');
+//	putchar(znak);
+//	for(slovo='a', j=1; slovo<='z'; slovo++, j++){ 
+//		putchar(slovo);
+//		if(slovo=='z'){ 
+//			for(k=j;k<n;k++,j++)
+//				putchar(' '); 
+//		}
+//		if((j%n)==0){ 
+//			j=0; 
+//			putchar(znak);
+//			putchar('\n');
+//			putchar(znak); 
+//		}
+//	}
+//	for(i=2; i<=(n+2); i++) 
+//		putchar(znak); 
+//		putchar('\n');
+//	}
+
+
+
+
+/*Задатак 3.
+Написати програм на језику С који:
+a) чита са тастатуре текст, знак по знак до знака тачка-зарез (;);
+b) приказује на екрану извештај о томе колико има у задатом тексту:
+- празних знакова,
+- међу суседним знаковима, парова узастопних празних знакова,
+c) приказује на екрану задати текст, без поновљених празних знакова; понавља при томе ставке
+// под а)b)c) док се не зада текст без празних знакова.*/
+
+// 	int c, brojPraznihZnakova = 0, preth=0, parovi = 0;
+
+// 	while ((c = getchar())!= ';'){
+// 		if(c == ' ' || c == '\t' || c=='\n'){
+// 			brojPraznihZnakova++;
+// 			if(preth != 0){
+// 				if(preth == c){
+// 					parovi++;
+// 				}
+// 			}
+// 			preth = c;
+// 		}	
+// 		preth = 0;
+// 	}
+// 	printf("U tekstu ima %d praznih znakova\n", brojPraznihZnakova);
+// 	printf("U tekstu ima %d parova\n", parovi);
+}
 
 }
