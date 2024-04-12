@@ -156,29 +156,29 @@ main() {
 /*Задатак 6.
 Написати програм на језику С који приказује на екрану оквир од знака * у n редова (оквир чија је
 свака страна састављена од n знакова *), вредност броја n (2≤n≤10) се задаје преко тастатуре.*/
-	int broj, i, j;
-	char znak;
-	printf("Unesite znak: \t");
-	scanf("%c", &znak);
+	// int broj, i, j;
+	// char znak;
+	// printf("Unesite znak: \t");
+	// scanf("%c", &znak);
 
-	do{
-		printf("Unesite broj od 2 do 10: \t");
-		scanf("%d", &broj);
-	} while (broj <2 || broj>10);
-	for(i = 1; i <= broj; i++){//1 2
-		for(j = 1; j <= broj; j++){//1
-			if(i != 1 && i != broj){
-				if(j != 1 && j != broj){
-					printf(" ");
-				} else {
-					printf("%c", znak);
-				}
-			}else{
-				printf("%c", znak);
-			}
-		}
-		printf("\n");
-	}
+	// do{
+	// 	printf("Unesite broj od 2 do 10: \t");
+	// 	scanf("%d", &broj);
+	// } while (broj <2 || broj>10);
+	// for(i = 1; i <= broj; i++){//1 2
+	// 	for(j = 1; j <= broj; j++){//1
+	// 		if(i != 1 && i != broj){
+	// 			if(j != 1 && j != broj){
+	// 				printf(" ");
+	// 			} else {
+	// 				printf("%c", znak);
+	// 			}
+	// 		}else{
+	// 			printf("%c", znak);
+	// 		}
+	// 	}
+	// 	printf("\n");
+	// }
 
 /*Задатак 7.
 Написати програм на језику С који црта на екрану троугао oд знака задатог преко тастатуре у n
@@ -204,4 +204,59 @@ c) * d) *******
 на екрану: број децималних цифара у задатом тексту, средњу вредност свих ових цифара и поруку
 о томе да ли текст међу узастопним цифрама има међусобно једнаких или не.
 */	
+
+//Задатак 2.
+//Написати програм на језику С који:
+//a) чита са тастатуре један знак и један цео број n,
+//b) проверава да ли је учитани знак један од знакова * или + и да ли је n непаран број у опсегу од
+//5 до 15, ако све то важи приказује на екрану n редова по n задатих знакова,
+//c) ако важе задати услови, приказује на екрану сва слова абецеде (од укупно 26 њих), највише по
+//n у сваком реду, у оквиру од задатог знака, на пример за знак * и n=9:
+// ***********
+// * abcdefghi *
+// * jklmnopqr*
+// * stuvwxyz *
+// ***********
+// //Решење 2.
+// #include <stdio.h>
+// #define MIN 5
+// #define MAX 15
+// main(){
+// 	int i, j, k, n, znak, slovo, praznih;
+// 	do{
+// 		printf("\nZnak: "); znak = getchar();getchar();
+// 	}while(znak!='*' && znak!='+');
+// 	do{
+// 		printf("\nNeparan Broj n (u posegu od %d do %d): ", MIN, MAX);
+// 		scanf("%d", &n);
+// 	}while( n<MIN || n>MAX || !(n%2) );
+// 	for(i=1; i<=n; i++){
+// 		for(j=1; j<=n; j++)
+// 			putchar(znak);
+// 		putchar('\n');
+// 	}
+// 	putchar('\n');
+// 	for(i=1; i<=(n+2); i++) 
+// 		putchar(znak); 
+// 	putchar('\n');
+// 	putchar(znak);
+// 	for(slovo='a', j=1; slovo<='z'; slovo++, j++){ 
+// 		putchar(slovo);
+// 		if(slovo=='z'){ 
+// 			for(k=j;k<n;k++,j++)
+// 				putchar(' '); 
+// 		}
+// 		if((j%n)==0){ 
+// 			j=0; 
+// 			putchar(znak);
+// 			putchar('\n');
+// 			putchar(znak); 
+// 		}
+// 	}
+// 	for(i=2; i<=(n+2); i++) 
+// 		putchar(znak); 
+// 		putchar('\n');
+// 	}
+
+
 }
