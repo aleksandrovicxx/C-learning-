@@ -257,10 +257,10 @@ c) * d) *******
 // 		putchar(znak); 
 // 		putchar('\n');
 // 	}
-#include <stdio.h>
-#define MIN 5
-#define MAX 15
-main(){
+// #include <stdio.h>
+// #define MIN 5
+// #define MAX 15
+// main(){
 
 //Задатак 2.
 //Написати програм на језику С који:
